@@ -1,0 +1,344 @@
+INFO [41387] - 02/24/26 23:02:00 - 0:00:00 - ========== Running DOOM ==========
+INFO [41387] - 02/24/26 23:02:00 - 0:00:00 - Experiment will be saved in: /home/biplav-oraon/Arnold/dumped/test/yk1c74nqoy
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - scenario: self_play
+                                             map_ids_train: [1]
+                                             map_ids_test: [2]
+                                             freedoom: True
+                                             height: 60
+                                             width: 108
+                                             gray: False
+                                             use_screen_buffer: True
+                                             use_depth_buffer: False
+                                             labels_mapping: 
+                                             game_features: target,enemy
+                                             render_hud: False
+                                             render_crosshair: True
+                                             render_weapon: True
+                                             hist_size: 4
+                                             frame_skip: 4
+                                             action_combinations: move_fb+move_lr;turn_lr;attack
+                                             freelook: False
+                                             speed: on
+                                             crouch: off
+                                             manual_control: True
+                                             players_per_game: 1
+                                             player_rank: 0
+                                             dump_path: /home/biplav-oraon/Arnold/dumped/test/yk1c74nqoy
+                                             visualize: True
+                                             evaluate: 1
+                                             human_player: False
+                                             reload: /home/biplav-oraon/Arnold/pretrained/vizdoom_2017_track2.pth
+                                             dump_freq: 0
+                                             gpu_id: -1
+                                             log_frequency: 100
+                                             network_type: dqn_rnn
+                                             use_bn: False
+                                             batch_size: 32
+                                             replay_memory_size: 1000000
+                                             start_decay: 0
+                                             stop_decay: 1000000
+                                             final_decay: 0.1
+                                             gamma: 0.99
+                                             dueling_network: False
+                                             recurrence: lstm
+                                             n_rec_updates: 1
+                                             n_rec_layers: 1
+                                             remember: True
+                                             clip_delta: 1.0
+                                             variable_dim: [32, 32]
+                                             bucket_size: [10, 1]
+                                             hidden_dim: 512
+                                             update_frequency: 4
+                                             dropout: 0.5
+                                             optimizer: rmsprop,lr=0.0002
+                                             wad: full_deathmatch
+                                             n_bots: 10
+                                             reward_values: 
+                                             randomize_textures: False
+                                             init_bots_health: 100
+                                             game_variables: [('health', 101), ('sel_ammo', 301)]
+                                             n_variables: 2
+                                             n_features: 2
+                                             n_fm: 3
+                                             use_continuous: False
+                                             episode_time: None
+                                             eval_freq: 20000
+                                             eval_time: 900
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - 29 available actions:
+                                             ['ATTACK']
+                                             ['TURN_LEFT']
+                                             ['TURN_LEFT', 'ATTACK']
+                                             ['TURN_RIGHT']
+                                             ['TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_FORWARD']
+                                             ['MOVE_FORWARD', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_LEFT']
+                                             ['MOVE_FORWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_BACKWARD']
+                                             ['MOVE_BACKWARD', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_LEFT']
+                                             ['MOVE_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_LEFT']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_RIGHT']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT']
+                                             ['MOVE_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_LEFT']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'ATTACK']
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - Reward values:
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - Input shape: (3, 60, 108)
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - Conv layer output dim : 4608
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - Hidden layer input dim: 4672
+INFO [41444] - 02/24/26 23:02:00 - 0:00:00 - Reloading model from /home/biplav-oraon/Arnold/pretrained/vizdoom_2017_track2.pth...
+INFO [41444] - 02/24/26 23:02:01 - 0:00:00 - Evaluating the model...
+INFO [41444] - 02/24/26 23:02:01 - 0:00:00 - Evaluating on map 2 ...
+INFO [41444] - 02/24/26 23:02:02 - 0:00:02 - Lost ammo: bullets (50 -> 49)
+INFO [41444] - 02/24/26 23:02:02 - 0:00:02 - Lost ammo: bullets (49 -> 48)
+INFO [41444] - 02/24/26 23:02:03 - 0:00:02 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:02:03 - 0:00:03 - Lost ammo: bullets (47 -> 46)
+INFO [41444] - 02/24/26 23:02:03 - 0:00:03 - Lost health (100 -> 90)
+INFO [41444] - 02/24/26 23:02:03 - 0:00:03 - Found health (90 -> 100)
+INFO [41444] - 02/24/26 23:02:03 - 0:00:03 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:04 - 0:00:03 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:04 - 0:00:04 - Lost health (100 -> 95)
+INFO [41444] - 02/24/26 23:02:04 - 0:00:04 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:04 - 0:00:04 - Lost ammo: bullets (43 -> 42)
+INFO [41444] - 02/24/26 23:02:05 - 0:00:04 - Lost ammo: bullets (42 -> 41)
+INFO [41444] - 02/24/26 23:02:05 - 0:00:04 - Lost ammo: bullets (41 -> 40)
+INFO [41444] - 02/24/26 23:02:05 - 0:00:05 - Lost ammo: bullets (40 -> 39)
+INFO [41444] - 02/24/26 23:02:05 - 0:00:05 - Kill
+INFO [41444] - 02/24/26 23:02:05 - 0:00:05 - Lost ammo: bullets (39 -> 38)
+INFO [41444] - 02/24/26 23:02:06 - 0:00:05 - Lost health (95 -> 85)
+INFO [41444] - 02/24/26 23:02:07 - 0:00:07 - Lost ammo: bullets (38 -> 37)
+INFO [41444] - 02/24/26 23:02:07 - 0:00:07 - Lost ammo: bullets (37 -> 36)
+INFO [41444] - 02/24/26 23:02:08 - 0:00:07 - Lost health (85 -> 75)
+INFO [41444] - 02/24/26 23:02:08 - 0:00:07 - Lost ammo: bullets (36 -> 35)
+INFO [41444] - 02/24/26 23:02:08 - 0:00:08 - Lost ammo: bullets (35 -> 34)
+INFO [41444] - 02/24/26 23:02:08 - 0:00:08 - Lost health (75 -> 60)
+INFO [41444] - 02/24/26 23:02:08 - 0:00:08 - Lost ammo: bullets (34 -> 33)
+INFO [41444] - 02/24/26 23:02:08 - 0:00:08 - Lost ammo: bullets (33 -> 32)
+INFO [41444] - 02/24/26 23:02:09 - 0:00:08 - Lost ammo: bullets (32 -> 31)
+INFO [41444] - 02/24/26 23:02:09 - 0:00:09 - Lost ammo: bullets (31 -> 30)
+INFO [41444] - 02/24/26 23:02:09 - 0:00:09 - Lost ammo: bullets (30 -> 29)
+INFO [41444] - 02/24/26 23:02:09 - 0:00:09 - Lost health (60 -> 50)
+INFO [41444] - 02/24/26 23:02:10 - 0:00:09 - Lost ammo: bullets (29 -> 28)
+INFO [41444] - 02/24/26 23:02:10 - 0:00:09 - Found health (50 -> 75)
+INFO [41444] - 02/24/26 23:02:10 - 0:00:09 - Lost ammo: bullets (28 -> 27)
+INFO [41444] - 02/24/26 23:02:10 - 0:00:10 - Lost ammo: bullets (27 -> 26)
+INFO [41444] - 02/24/26 23:02:10 - 0:00:10 - Lost ammo: bullets (26 -> 25)
+INFO [41444] - 02/24/26 23:02:11 - 0:00:10 - Kill
+INFO [41444] - 02/24/26 23:02:11 - 0:00:10 - Lost ammo: bullets (25 -> 24)
+INFO [41444] - 02/24/26 23:02:14 - 0:00:13 - Lost health (75 -> 60)
+INFO [41444] - 02/24/26 23:02:14 - 0:00:14 - Lost ammo: bullets (24 -> 23)
+INFO [41444] - 02/24/26 23:02:15 - 0:00:14 - Lost ammo: bullets (23 -> 22)
+INFO [41444] - 02/24/26 23:02:15 - 0:00:15 - Lost ammo: bullets (22 -> 21)
+INFO [41444] - 02/24/26 23:02:15 - 0:00:15 - Lost ammo: bullets (21 -> 20)
+INFO [41444] - 02/24/26 23:02:16 - 0:00:15 - Lost ammo: bullets (20 -> 19)
+INFO [41444] - 02/24/26 23:02:16 - 0:00:16 - Lost ammo: bullets (19 -> 18)
+INFO [41444] - 02/24/26 23:02:16 - 0:00:16 - Lost ammo: bullets (18 -> 17)
+INFO [41444] - 02/24/26 23:02:16 - 0:00:16 - Lost ammo: bullets (17 -> 16)
+INFO [41444] - 02/24/26 23:02:17 - 0:00:16 - Lost ammo: bullets (16 -> 15)
+INFO [41444] - 02/24/26 23:02:17 - 0:00:17 - Lost ammo: bullets (15 -> 14)
+INFO [41444] - 02/24/26 23:02:17 - 0:00:17 - Lost ammo: bullets (14 -> 13)
+INFO [41444] - 02/24/26 23:02:18 - 0:00:17 - Lost health (60 -> 50)
+INFO [41444] - 02/24/26 23:02:18 - 0:00:18 - Kill
+INFO [41444] - 02/24/26 23:02:18 - 0:00:18 - Lost health (50 -> 35)
+INFO [41444] - 02/24/26 23:02:18 - 0:00:18 - Lost ammo: bullets (13 -> 12)
+INFO [41444] - 02/24/26 23:02:18 - 0:00:18 - Lost health (35 -> 25)
+INFO [41444] - 02/24/26 23:02:19 - 0:00:18 - Lost health (25 -> 10)
+INFO [41444] - 02/24/26 23:02:20 - 0:00:20 - Lost ammo: bullets (12 -> 11)
+INFO [41444] - 02/24/26 23:02:21 - 0:00:20 - Dead
+INFO [41444] - 02/24/26 23:02:21 - 0:00:20 - Lost health (10 -> -5)
+INFO [41444] - 02/24/26 23:02:21 - 0:00:20 - Respawn player
+INFO [41444] - 02/24/26 23:02:22 - 0:00:21 - Lost ammo: bullets (50 -> 49)
+INFO [41444] - 02/24/26 23:02:22 - 0:00:21 - Lost ammo: bullets (49 -> 48)
+INFO [41444] - 02/24/26 23:02:22 - 0:00:22 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:02:22 - 0:00:22 - Lost ammo: bullets (47 -> 46)
+INFO [41444] - 02/24/26 23:02:23 - 0:00:22 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:23 - 0:00:22 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:23 - 0:00:23 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:23 - 0:00:23 - Dead
+INFO [41444] - 02/24/26 23:02:23 - 0:00:23 - Lost health (100 -> -6)
+INFO [41444] - 02/24/26 23:02:23 - 0:00:23 - Respawn player
+INFO [41444] - 02/24/26 23:02:24 - 0:00:23 - Lost ammo: bullets (50 -> 49)
+INFO [41444] - 02/24/26 23:02:24 - 0:00:24 - Lost ammo: bullets (49 -> 48)
+INFO [41444] - 02/24/26 23:02:24 - 0:00:24 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:02:25 - 0:00:24 - Lost ammo: bullets (47 -> 46)
+INFO [41444] - 02/24/26 23:02:25 - 0:00:25 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:25 - 0:00:25 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:25 - 0:00:25 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:26 - 0:00:25 - Lost health (100 -> 90)
+INFO [41444] - 02/24/26 23:02:26 - 0:00:25 - Lost ammo: bullets (43 -> 42)
+INFO [41444] - 02/24/26 23:02:26 - 0:00:26 - Lost ammo: bullets (42 -> 41)
+INFO [41444] - 02/24/26 23:02:26 - 0:00:26 - Lost health (90 -> 85)
+INFO [41444] - 02/24/26 23:02:26 - 0:00:26 - Lost ammo: bullets (41 -> 40)
+INFO [41444] - 02/24/26 23:02:27 - 0:00:26 - Lost ammo: bullets (40 -> 39)
+INFO [41444] - 02/24/26 23:02:27 - 0:00:26 - Lost ammo: bullets (39 -> 38)
+INFO [41444] - 02/24/26 23:02:27 - 0:00:27 - Lost health (85 -> 80)
+INFO [41444] - 02/24/26 23:02:27 - 0:00:27 - Kill
+INFO [41444] - 02/24/26 23:02:27 - 0:00:27 - Lost ammo: bullets (38 -> 37)
+INFO [41444] - 02/24/26 23:02:27 - 0:00:27 - Lost ammo: bullets (37 -> 36)
+INFO [41444] - 02/24/26 23:02:28 - 0:00:27 - Lost ammo: bullets (36 -> 35)
+INFO [41444] - 02/24/26 23:02:28 - 0:00:28 - Lost ammo: bullets (35 -> 34)
+INFO [41444] - 02/24/26 23:02:28 - 0:00:28 - Lost health (80 -> 65)
+INFO [41444] - 02/24/26 23:02:28 - 0:00:28 - Lost ammo: bullets (34 -> 33)
+INFO [41444] - 02/24/26 23:02:29 - 0:00:28 - Lost ammo: bullets (33 -> 32)
+INFO [41444] - 02/24/26 23:02:29 - 0:00:28 - Lost health (65 -> 55)
+INFO [41444] - 02/24/26 23:02:29 - 0:00:28 - Lost ammo: bullets (32 -> 31)
+INFO [41444] - 02/24/26 23:02:29 - 0:00:29 - Lost ammo: bullets (31 -> 30)
+INFO [41444] - 02/24/26 23:02:29 - 0:00:29 - Lost health (55 -> 40)
+INFO [41444] - 02/24/26 23:02:29 - 0:00:29 - Lost ammo: bullets (30 -> 29)
+INFO [41444] - 02/24/26 23:02:30 - 0:00:29 - Kill
+INFO [41444] - 02/24/26 23:02:30 - 0:00:29 - Lost ammo: bullets (29 -> 28)
+INFO [41444] - 02/24/26 23:02:30 - 0:00:30 - Lost ammo: bullets (28 -> 27)
+INFO [41444] - 02/24/26 23:02:30 - 0:00:30 - Lost health (40 -> 35)
+INFO [41444] - 02/24/26 23:02:30 - 0:00:30 - Lost ammo: bullets (27 -> 26)
+INFO [41444] - 02/24/26 23:02:30 - 0:00:30 - Lost ammo: bullets (26 -> 25)
+INFO [41444] - 02/24/26 23:02:31 - 0:00:30 - Lost ammo: bullets (25 -> 24)
+INFO [41444] - 02/24/26 23:02:31 - 0:00:31 - Lost health (35 -> 30)
+INFO [41444] - 02/24/26 23:02:31 - 0:00:31 - Lost ammo: bullets (24 -> 23)
+INFO [41444] - 02/24/26 23:02:31 - 0:00:31 - Kill
+INFO [41444] - 02/24/26 23:02:31 - 0:00:31 - Lost ammo: bullets (23 -> 22)
+INFO [41444] - 02/24/26 23:02:32 - 0:00:31 - Lost ammo: bullets (22 -> 21)
+INFO [41444] - 02/24/26 23:02:32 - 0:00:31 - Lost health (30 -> 20)
+INFO [41444] - 02/24/26 23:02:32 - 0:00:31 - Lost ammo: bullets (21 -> 20)
+INFO [41444] - 02/24/26 23:02:32 - 0:00:32 - Kill
+INFO [41444] - 02/24/26 23:02:32 - 0:00:32 - Lost ammo: bullets (20 -> 19)
+INFO [41444] - 02/24/26 23:02:33 - 0:00:32 - Lost health (20 -> 10)
+INFO [41444] - 02/24/26 23:02:33 - 0:00:32 - Dead
+INFO [41444] - 02/24/26 23:02:33 - 0:00:32 - Lost health (10 -> 0)
+INFO [41444] - 02/24/26 23:02:33 - 0:00:32 - Respawn player
+INFO [41444] - 02/24/26 23:02:33 - 0:00:33 - Lost ammo: bullets (50 -> 49)
+INFO [41444] - 02/24/26 23:02:34 - 0:00:33 - Lost ammo: bullets (49 -> 48)
+INFO [41444] - 02/24/26 23:02:34 - 0:00:33 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:02:34 - 0:00:34 - Kill
+INFO [41444] - 02/24/26 23:02:34 - 0:00:34 - Lost ammo: bullets (47 -> 46)
+INFO [41444] - 02/24/26 23:02:34 - 0:00:34 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:35 - 0:00:34 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:35 - 0:00:35 - Lost health (100 -> 85)
+INFO [41444] - 02/24/26 23:02:35 - 0:00:35 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:35 - 0:00:35 - Kill
+INFO [41444] - 02/24/26 23:02:35 - 0:00:35 - Lost ammo: bullets (43 -> 42)
+INFO [41444] - 02/24/26 23:02:37 - 0:00:36 - Lost ammo: bullets (42 -> 41)
+INFO [41444] - 02/24/26 23:02:38 - 0:00:38 - Lost ammo: bullets (41 -> 40)
+INFO [41444] - 02/24/26 23:02:39 - 0:00:39 - Lost ammo: bullets (40 -> 39)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:39 - Lost ammo: bullets (39 -> 38)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:39 - Lost health (85 -> 75)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:39 - Found ammo: bullets (38 -> 48)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:39 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:40 - Lost ammo: bullets (47 -> 46)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:40 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:40 - 0:00:40 - Lost health (75 -> 60)
+INFO [41444] - 02/24/26 23:02:41 - 0:00:40 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:41 - 0:00:41 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:41 - 0:00:41 - Lost ammo: bullets (43 -> 42)
+INFO [41444] - 02/24/26 23:02:41 - 0:00:41 - Lost ammo: bullets (42 -> 41)
+INFO [41444] - 02/24/26 23:02:42 - 0:00:41 - Lost health (60 -> 45)
+INFO [41444] - 02/24/26 23:02:42 - 0:00:41 - Lost ammo: bullets (41 -> 40)
+INFO [41444] - 02/24/26 23:02:42 - 0:00:42 - Lost ammo: bullets (40 -> 39)
+INFO [41444] - 02/24/26 23:02:42 - 0:00:42 - Lost ammo: bullets (39 -> 38)
+INFO [41444] - 02/24/26 23:02:43 - 0:00:42 - Kill
+INFO [41444] - 02/24/26 23:02:43 - 0:00:42 - Lost ammo: bullets (38 -> 37)
+INFO [41444] - 02/24/26 23:02:43 - 0:00:43 - Found ammo: bullets (37 -> 46)
+INFO [41444] - 02/24/26 23:02:43 - 0:00:43 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:44 - 0:00:44 - Found health (45 -> 70)
+INFO [41444] - 02/24/26 23:02:45 - 0:00:44 - Lost health (70 -> 60)
+INFO [41444] - 02/24/26 23:02:45 - 0:00:45 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:45 - 0:00:45 - Lost health (60 -> 50)
+INFO [41444] - 02/24/26 23:02:45 - 0:00:45 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:46 - 0:00:45 - Lost ammo: bullets (43 -> 42)
+INFO [41444] - 02/24/26 23:02:46 - 0:00:45 - Lost ammo: bullets (42 -> 41)
+INFO [41444] - 02/24/26 23:02:46 - 0:00:46 - Lost health (50 -> 45)
+INFO [41444] - 02/24/26 23:02:46 - 0:00:46 - Lost ammo: bullets (41 -> 40)
+INFO [41444] - 02/24/26 23:02:46 - 0:00:46 - Lost ammo: bullets (40 -> 39)
+INFO [41444] - 02/24/26 23:02:47 - 0:00:46 - Lost ammo: bullets (39 -> 38)
+INFO [41444] - 02/24/26 23:02:47 - 0:00:46 - Lost ammo: bullets (38 -> 37)
+INFO [41444] - 02/24/26 23:02:47 - 0:00:47 - Lost ammo: bullets (37 -> 36)
+INFO [41444] - 02/24/26 23:02:47 - 0:00:47 - Lost ammo: bullets (36 -> 35)
+INFO [41444] - 02/24/26 23:02:48 - 0:00:47 - Lost ammo: bullets (35 -> 34)
+INFO [41444] - 02/24/26 23:02:48 - 0:00:47 - Lost ammo: bullets (34 -> 33)
+INFO [41444] - 02/24/26 23:02:48 - 0:00:48 - Lost ammo: bullets (33 -> 32)
+INFO [41444] - 02/24/26 23:02:49 - 0:00:48 - Lost ammo: bullets (32 -> 31)
+INFO [41444] - 02/24/26 23:02:49 - 0:00:49 - Kill
+INFO [41444] - 02/24/26 23:02:49 - 0:00:49 - Lost ammo: bullets (31 -> 30)
+INFO [41444] - 02/24/26 23:02:50 - 0:00:49 - Lost ammo: bullets (30 -> 29)
+INFO [41444] - 02/24/26 23:02:50 - 0:00:49 - Lost ammo: bullets (29 -> 28)
+INFO [41444] - 02/24/26 23:02:50 - 0:00:50 - Dead
+INFO [41444] - 02/24/26 23:02:50 - 0:00:50 - Suicide
+INFO [41444] - 02/24/26 23:02:50 - 0:00:50 - Lost health (45 -> -53)
+INFO [41444] - 02/24/26 23:02:50 - 0:00:50 - Respawn player
+INFO [41444] - 02/24/26 23:02:51 - 0:00:50 - Lost ammo: bullets (50 -> 49)
+INFO [41444] - 02/24/26 23:02:51 - 0:00:50 - Lost ammo: bullets (49 -> 48)
+INFO [41444] - 02/24/26 23:02:51 - 0:00:51 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:02:51 - 0:00:51 - Lost ammo: bullets (47 -> 46)
+INFO [41444] - 02/24/26 23:02:52 - 0:00:51 - Lost ammo: bullets (46 -> 45)
+INFO [41444] - 02/24/26 23:02:52 - 0:00:52 - Lost ammo: bullets (45 -> 44)
+INFO [41444] - 02/24/26 23:02:52 - 0:00:52 - Lost health (100 -> 85)
+INFO [41444] - 02/24/26 23:02:52 - 0:00:52 - Lost ammo: bullets (44 -> 43)
+INFO [41444] - 02/24/26 23:02:52 - 0:00:52 - Lost health (85 -> 70)
+INFO [41444] - 02/24/26 23:02:53 - 0:00:52 - Lost ammo: bullets (43 -> 42)
+INFO [41444] - 02/24/26 23:02:53 - 0:00:52 - Lost health (70 -> 60)
+INFO [41444] - 02/24/26 23:02:53 - 0:00:52 - Kill
+INFO [41444] - 02/24/26 23:02:53 - 0:00:52 - Lost ammo: bullets (42 -> 41)
+INFO [41444] - 02/24/26 23:02:53 - 0:00:53 - Lost ammo: bullets (41 -> 40)
+INFO [41444] - 02/24/26 23:02:53 - 0:00:53 - Found health (60 -> 85)
+INFO [41444] - 02/24/26 23:02:53 - 0:00:53 - Lost ammo: bullets (40 -> 39)
+INFO [41444] - 02/24/26 23:02:54 - 0:00:53 - Lost ammo: bullets (39 -> 38)
+INFO [41444] - 02/24/26 23:02:54 - 0:00:53 - Lost ammo: bullets (38 -> 37)
+INFO [41444] - 02/24/26 23:02:54 - 0:00:54 - Lost health (85 -> 80)
+INFO [41444] - 02/24/26 23:02:54 - 0:00:54 - Lost ammo: bullets (37 -> 36)
+INFO [41444] - 02/24/26 23:02:54 - 0:00:54 - Lost ammo: bullets (36 -> 35)
+INFO [41444] - 02/24/26 23:02:55 - 0:00:54 - Lost ammo: bullets (35 -> 34)
+INFO [41444] - 02/24/26 23:02:55 - 0:00:55 - Lost ammo: bullets (34 -> 33)
+INFO [41444] - 02/24/26 23:02:55 - 0:00:55 - Lost ammo: bullets (33 -> 32)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:55 - Lost ammo: bullets (32 -> 31)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:55 - Lost ammo: bullets (31 -> 30)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:56 - Lost health (80 -> 70)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:56 - Lost ammo: bullets (30 -> 29)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:56 - Lost health (70 -> 55)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:56 - Lost ammo: bullets (29 -> 28)
+INFO [41444] - 02/24/26 23:02:56 - 0:00:56 - Lost health (55 -> 50)
+INFO [41444] - 02/24/26 23:02:57 - 0:00:56 - Lost ammo: bullets (28 -> 27)
+INFO [41444] - 02/24/26 23:02:57 - 0:00:56 - Kill
+INFO [41444] - 02/24/26 23:02:57 - 0:00:56 - Lost ammo: bullets (27 -> 26)
+INFO [41444] - 02/24/26 23:02:57 - 0:00:57 - Lost ammo: bullets (26 -> 25)
+INFO [41444] - 02/24/26 23:02:58 - 0:00:57 - Lost health (50 -> 45)
+INFO [41444] - 02/24/26 23:02:58 - 0:00:57 - Lost ammo: bullets (25 -> 24)
+INFO [41444] - 02/24/26 23:02:58 - 0:00:58 - Lost ammo: bullets (24 -> 23)
+INFO [41444] - 02/24/26 23:02:58 - 0:00:58 - Lost ammo: bullets (23 -> 22)
+INFO [41444] - 02/24/26 23:02:59 - 0:00:58 - Lost health (45 -> 35)
+INFO [41444] - 02/24/26 23:02:59 - 0:00:58 - Lost ammo: bullets (22 -> 21)
+INFO [41444] - 02/24/26 23:02:59 - 0:00:59 - Lost ammo: bullets (21 -> 20)
+INFO [41444] - 02/24/26 23:02:59 - 0:00:59 - Lost ammo: bullets (20 -> 19)
+INFO [41444] - 02/24/26 23:03:00 - 0:00:59 - Lost ammo: bullets (19 -> 18)
+INFO [41444] - 02/24/26 23:03:00 - 0:00:59 - Lost health (35 -> 30)
+INFO [41444] - 02/24/26 23:03:00 - 0:00:59 - Lost ammo: bullets (18 -> 17)
+INFO [41444] - 02/24/26 23:03:00 - 0:01:00 - Lost ammo: bullets (17 -> 16)
+INFO [41444] - 02/24/26 23:03:00 - 0:01:00 - Lost ammo: bullets (16 -> 15)
+INFO [41444] - 02/24/26 23:03:01 - 0:01:00 - Lost health (30 -> 25)
+INFO [41444] - 02/24/26 23:03:01 - 0:01:00 - Kill
+INFO [41444] - 02/24/26 23:03:01 - 0:01:00 - Lost ammo: bullets (15 -> 14)
+INFO [41444] - 02/24/26 23:03:01 - 0:01:01 - Lost health (25 -> 15)
+INFO [41444] - 02/24/26 23:03:01 - 0:01:01 - Lost ammo: bullets (14 -> 13)
+INFO [41444] - 02/24/26 23:03:01 - 0:01:01 - Lost ammo: bullets (13 -> 12)
+INFO [41444] - 02/24/26 23:03:02 - 0:01:01 - Lost ammo: bullets (12 -> 11)
+INFO [41444] - 02/24/26 23:03:02 - 0:01:01 - Lost health (15 -> 10)
+INFO [41444] - 02/24/26 23:03:02 - 0:01:02 - Dead
+INFO [41444] - 02/24/26 23:03:02 - 0:01:02 - Lost health (10 -> 0)
+INFO [41444] - 02/24/26 23:03:02 - 0:01:02 - Respawn player
+INFO [41444] - 02/24/26 23:03:02 - 0:01:02 - Lost ammo: bullets (50 -> 49)
+INFO [41444] - 02/24/26 23:03:03 - 0:01:02 - Lost ammo: bullets (49 -> 48)
+INFO [41444] - 02/24/26 23:03:03 - 0:01:03 - Kill
+INFO [41444] - 02/24/26 23:03:03 - 0:01:03 - Lost ammo: bullets (48 -> 47)
+INFO [41444] - 02/24/26 23:03:03 - 0:01:03 - Lost ammo: bullets (47 -> 46)

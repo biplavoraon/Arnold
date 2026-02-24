@@ -205,7 +205,7 @@ class DQN(object):
             if pred_features is not None:
                 assert pred_features.size() == (1, seq_len, self.module.n_features)
                 pred_features = pred_features[0, -1]
-        action_id = scores.data.max(0)[1][0]
+        action_id = scores.argmax().item()
         self.pred_features = pred_features
         return action_id
 

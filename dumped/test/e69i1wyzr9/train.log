@@ -1,0 +1,186 @@
+INFO [41076] - 02/24/26 22:57:57 - 0:00:00 - ========== Running DOOM ==========
+INFO [41076] - 02/24/26 22:57:57 - 0:00:00 - Experiment will be saved in: /home/biplav-oraon/Arnold/dumped/test/e69i1wyzr9
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - scenario: self_play
+                                             map_ids_train: [1]
+                                             map_ids_test: [1]
+                                             freedoom: True
+                                             height: 60
+                                             width: 108
+                                             gray: False
+                                             use_screen_buffer: True
+                                             use_depth_buffer: False
+                                             labels_mapping: 
+                                             game_features: target,enemy
+                                             render_hud: False
+                                             render_crosshair: True
+                                             render_weapon: True
+                                             hist_size: 4
+                                             frame_skip: 3
+                                             action_combinations: attack+move_lr;turn_lr;move_fb
+                                             freelook: False
+                                             speed: on
+                                             crouch: off
+                                             manual_control: True
+                                             players_per_game: 1
+                                             player_rank: 0
+                                             dump_path: /home/biplav-oraon/Arnold/dumped/test/e69i1wyzr9
+                                             visualize: True
+                                             evaluate: 1
+                                             human_player: False
+                                             reload: /home/biplav-oraon/Arnold/pretrained/vizdoom_2017_track1.pth
+                                             dump_freq: 0
+                                             gpu_id: -1
+                                             log_frequency: 100
+                                             network_type: dqn_rnn
+                                             use_bn: False
+                                             batch_size: 32
+                                             replay_memory_size: 1000000
+                                             start_decay: 0
+                                             stop_decay: 1000000
+                                             final_decay: 0.1
+                                             gamma: 0.99
+                                             dueling_network: False
+                                             recurrence: lstm
+                                             n_rec_updates: 1
+                                             n_rec_layers: 1
+                                             remember: True
+                                             clip_delta: 1.0
+                                             variable_dim: [32, 32]
+                                             bucket_size: [10, 1]
+                                             hidden_dim: 512
+                                             update_frequency: 4
+                                             dropout: 0.5
+                                             optimizer: rmsprop,lr=0.0002
+                                             wad: deathmatch_rockets
+                                             n_bots: 10
+                                             reward_values: 
+                                             randomize_textures: False
+                                             init_bots_health: 100
+                                             game_variables: [('health', 101), ('sel_ammo', 301)]
+                                             n_variables: 2
+                                             n_features: 2
+                                             n_fm: 3
+                                             use_continuous: False
+                                             episode_time: None
+                                             eval_freq: 20000
+                                             eval_time: 900
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - 35 available actions:
+                                             ['MOVE_FORWARD']
+                                             ['MOVE_BACKWARD']
+                                             ['TURN_LEFT']
+                                             ['TURN_LEFT', 'MOVE_FORWARD']
+                                             ['TURN_LEFT', 'MOVE_BACKWARD']
+                                             ['TURN_RIGHT']
+                                             ['TURN_RIGHT', 'MOVE_FORWARD']
+                                             ['TURN_RIGHT', 'MOVE_BACKWARD']
+                                             ['ATTACK']
+                                             ['ATTACK', 'MOVE_FORWARD']
+                                             ['ATTACK', 'MOVE_BACKWARD']
+                                             ['ATTACK', 'TURN_LEFT']
+                                             ['ATTACK', 'TURN_LEFT', 'MOVE_FORWARD']
+                                             ['ATTACK', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                             ['ATTACK', 'TURN_RIGHT']
+                                             ['ATTACK', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                             ['ATTACK', 'TURN_RIGHT', 'MOVE_BACKWARD']
+                                             ['MOVE_LEFT']
+                                             ['MOVE_LEFT', 'MOVE_FORWARD']
+                                             ['MOVE_LEFT', 'MOVE_BACKWARD']
+                                             ['MOVE_LEFT', 'TURN_LEFT']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'MOVE_FORWARD']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                             ['MOVE_LEFT', 'TURN_RIGHT']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'MOVE_BACKWARD']
+                                             ['MOVE_RIGHT']
+                                             ['MOVE_RIGHT', 'MOVE_FORWARD']
+                                             ['MOVE_RIGHT', 'MOVE_BACKWARD']
+                                             ['MOVE_RIGHT', 'TURN_LEFT']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'MOVE_FORWARD']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'MOVE_BACKWARD']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'MOVE_FORWARD']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'MOVE_BACKWARD']
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Reward values:
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Input shape: (3, 60, 108)
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Conv layer output dim : 4608
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Hidden layer input dim: 4672
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Reloading model from /home/biplav-oraon/Arnold/pretrained/vizdoom_2017_track1.pth...
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Evaluating the model...
+INFO [41133] - 02/24/26 22:57:57 - 0:00:00 - Evaluating on map 1 ...
+INFO [41133] - 02/24/26 22:58:00 - 0:00:02 - Lost ammo: rockets (15 -> 14)
+INFO [41133] - 02/24/26 22:58:00 - 0:00:02 - Found armor (0 -> 100)
+INFO [41133] - 02/24/26 22:58:00 - 0:00:02 - Kill
+INFO [41133] - 02/24/26 22:58:01 - 0:00:04 - Lost ammo: rockets (14 -> 13)
+INFO [41133] - 02/24/26 22:58:01 - 0:00:04 - Kill
+INFO [41133] - 02/24/26 22:58:02 - 0:00:04 - Lost health (100 -> 99)
+INFO [41133] - 02/24/26 22:58:02 - 0:00:04 - Found health (99 -> 100)
+INFO [41133] - 02/24/26 22:58:02 - 0:00:05 - Found ammo: rockets (13 -> 15)
+INFO [41133] - 02/24/26 22:58:03 - 0:00:05 - Found ammo: rockets (15 -> 16)
+INFO [41133] - 02/24/26 22:58:03 - 0:00:06 - Lost ammo: rockets (16 -> 15)
+INFO [41133] - 02/24/26 22:58:03 - 0:00:06 - Kill
+INFO [41133] - 02/24/26 22:58:03 - 0:00:06 - Lost health (100 -> 56)
+INFO [41133] - 02/24/26 22:58:03 - 0:00:06 - Lost armor (100 -> 78)
+INFO [41133] - 02/24/26 22:58:04 - 0:00:06 - Lost ammo: rockets (15 -> 14)
+INFO [41133] - 02/24/26 22:58:04 - 0:00:07 - Kill
+INFO [41133] - 02/24/26 22:58:04 - 0:00:07 - Dead
+INFO [41133] - 02/24/26 22:58:04 - 0:00:07 - Lost health (56 -> -75)
+INFO [41133] - 02/24/26 22:58:04 - 0:00:07 - Lost armor (78 -> 14)
+INFO [41133] - 02/24/26 22:58:04 - 0:00:07 - Respawn player
+INFO [41133] - 02/24/26 22:58:05 - 0:00:08 - Lost ammo: rockets (15 -> 14)
+INFO [41133] - 02/24/26 22:58:05 - 0:00:08 - Kill
+INFO [41133] - 02/24/26 22:58:05 - 0:00:08 - Lost ammo: rockets (14 -> 13)
+INFO [41133] - 02/24/26 22:58:06 - 0:00:08 - Lost ammo: rockets (13 -> 12)
+INFO [41133] - 02/24/26 22:58:06 - 0:00:09 - Kill
+INFO [41133] - 02/24/26 22:58:09 - 0:00:11 - Lost ammo: rockets (12 -> 11)
+INFO [41133] - 02/24/26 22:58:09 - 0:00:12 - Kill
+INFO [41133] - 02/24/26 22:58:09 - 0:00:12 - Lost health (100 -> 56)
+INFO [41133] - 02/24/26 22:58:09 - 0:00:12 - Dead
+INFO [41133] - 02/24/26 22:58:09 - 0:00:12 - Lost health (56 -> -84)
+INFO [41133] - 02/24/26 22:58:09 - 0:00:12 - Respawn player
+INFO [41133] - 02/24/26 22:58:11 - 0:00:13 - Found armor (0 -> 100)
+INFO [41133] - 02/24/26 22:58:11 - 0:00:14 - Lost ammo: rockets (15 -> 14)
+INFO [41133] - 02/24/26 22:58:11 - 0:00:14 - Kill
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost ammo: rockets (14 -> 13)
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost health (100 -> 96)
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost armor (100 -> 98)
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost health (96 -> 62)
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost armor (98 -> 82)
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost health (62 -> 56)
+INFO [41133] - 02/24/26 22:58:12 - 0:00:15 - Lost armor (82 -> 80)
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Lost ammo: rockets (13 -> 12)
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Kill
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Dead
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Suicide
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Lost health (56 -> -22)
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Lost armor (80 -> 41)
+INFO [41133] - 02/24/26 22:58:13 - 0:00:16 - Respawn player
+INFO [41133] - 02/24/26 22:58:14 - 0:00:16 - Lost ammo: rockets (15 -> 14)
+INFO [41133] - 02/24/26 22:58:14 - 0:00:16 - Kill
+INFO [41133] - 02/24/26 22:58:15 - 0:00:17 - Lost ammo: rockets (14 -> 13)
+INFO [41133] - 02/24/26 22:58:15 - 0:00:18 - Kill
+INFO [41133] - 02/24/26 22:58:15 - 0:00:18 - Found armor (0 -> 200)
+INFO [41133] - 02/24/26 22:58:16 - 0:00:18 - Lost health (100 -> 95)
+INFO [41133] - 02/24/26 22:58:16 - 0:00:18 - Lost armor (200 -> 195)
+INFO [41133] - 02/24/26 22:58:16 - 0:00:19 - Found ammo: rockets (13 -> 14)
+INFO [41133] - 02/24/26 22:58:17 - 0:00:19 - Found ammo: rockets (14 -> 16)
+INFO [41133] - 02/24/26 22:58:17 - 0:00:20 - Found health (95 -> 100)
+INFO [41133] - 02/24/26 22:58:17 - 0:00:20 - Lost ammo: rockets (16 -> 15)
+INFO [41133] - 02/24/26 22:58:17 - 0:00:20 - Kill
+INFO [41133] - 02/24/26 22:58:17 - 0:00:20 - Lost health (100 -> 44)
+INFO [41133] - 02/24/26 22:58:17 - 0:00:20 - Lost armor (195 -> 140)
+INFO [41133] - 02/24/26 22:58:18 - 0:00:21 - Lost ammo: rockets (15 -> 14)
+INFO [41133] - 02/24/26 22:58:18 - 0:00:21 - Found health (44 -> 69)
+INFO [41133] - 02/24/26 22:58:19 - 0:00:21 - Lost ammo: rockets (14 -> 13)
+INFO [41133] - 02/24/26 22:58:19 - 0:00:21 - Kill
+INFO [41133] - 02/24/26 22:58:21 - 0:00:24 - Found health (69 -> 94)
+INFO [41133] - 02/24/26 22:58:22 - 0:00:24 - Lost health (94 -> 33)
+INFO [41133] - 02/24/26 22:58:22 - 0:00:24 - Lost armor (140 -> 79)
+INFO [41133] - 02/24/26 22:58:22 - 0:00:24 - Lost ammo: rockets (13 -> 12)
+INFO [41133] - 02/24/26 22:58:23 - 0:00:25 - Lost ammo: rockets (12 -> 11)
+INFO [41133] - 02/24/26 22:58:23 - 0:00:25 - Dead
+INFO [41133] - 02/24/26 22:58:23 - 0:00:25 - Lost health (33 -> -15)
+INFO [41133] - 02/24/26 22:58:23 - 0:00:25 - Lost armor (79 -> 31)
+INFO [41133] - 02/24/26 22:58:23 - 0:00:26 - Respawn player
+INFO [41133] - 02/24/26 22:58:24 - 0:00:27 - Found armor (0 -> 100)

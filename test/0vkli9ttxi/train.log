@@ -1,0 +1,617 @@
+INFO [46097] - 02/25/26 00:01:21 - 0:00:00 - ========== Running DOOM ==========
+INFO [46097] - 02/25/26 00:01:21 - 0:00:00 - Experiment will be saved in: ./test/0vkli9ttxi
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - scenario: self_play
+                                             map_ids_train: [1]
+                                             map_ids_test: [7]
+                                             freedoom: True
+                                             height: 60
+                                             width: 108
+                                             gray: False
+                                             use_screen_buffer: True
+                                             use_depth_buffer: False
+                                             labels_mapping: 0
+                                             game_features: target,enemy
+                                             render_hud: False
+                                             render_crosshair: True
+                                             render_weapon: True
+                                             hist_size: 6
+                                             frame_skip: 3
+                                             action_combinations: move_fb+move_lr;turn_lr;attack
+                                             freelook: False
+                                             speed: on
+                                             crouch: off
+                                             manual_control: True
+                                             players_per_game: 4
+                                             player_rank: 0
+                                             dump_path: ./test/0vkli9ttxi
+                                             visualize: True
+                                             evaluate: 1
+                                             human_player: True
+                                             reload: /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth
+                                             dump_freq: 0
+                                             gpu_id: -1
+                                             log_frequency: 100
+                                             network_type: dqn_rnn
+                                             use_bn: False
+                                             batch_size: 32
+                                             replay_memory_size: 1000000
+                                             start_decay: 0
+                                             stop_decay: 1000000
+                                             final_decay: 0.1
+                                             gamma: 0.99
+                                             dueling_network: False
+                                             recurrence: lstm
+                                             n_rec_updates: 1
+                                             n_rec_layers: 1
+                                             remember: True
+                                             clip_delta: 1.0
+                                             variable_dim: [32, 32]
+                                             bucket_size: [10, 1]
+                                             hidden_dim: 512
+                                             update_frequency: 4
+                                             dropout: 0.5
+                                             optimizer: rmsprop,lr=0.0002
+                                             wad: deathmatch_shotgun
+                                             n_bots: 0
+                                             reward_values: 
+                                             randomize_textures: False
+                                             init_bots_health: 100
+                                             game_variables: [('health', 101), ('sel_ammo', 301)]
+                                             n_variables: 2
+                                             n_features: 2
+                                             n_fm: 4
+                                             use_continuous: False
+                                             episode_time: None
+                                             eval_freq: 20000
+                                             eval_time: 900
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - 29 available actions:
+                                             ['ATTACK']
+                                             ['TURN_LEFT']
+                                             ['TURN_LEFT', 'ATTACK']
+                                             ['TURN_RIGHT']
+                                             ['TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_FORWARD']
+                                             ['MOVE_FORWARD', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_LEFT']
+                                             ['MOVE_FORWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_BACKWARD']
+                                             ['MOVE_BACKWARD', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_LEFT']
+                                             ['MOVE_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_LEFT']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_RIGHT']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT']
+                                             ['MOVE_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_LEFT']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'ATTACK']
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Reward values:
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Input shape: (4, 60, 108)
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - scenario: self_play
+                                             map_ids_train: [1]
+                                             map_ids_test: [7]
+                                             freedoom: True
+                                             height: 60
+                                             width: 108
+                                             gray: False
+                                             use_screen_buffer: True
+                                             use_depth_buffer: False
+                                             labels_mapping: 0
+                                             game_features: target,enemy
+                                             render_hud: False
+                                             render_crosshair: True
+                                             render_weapon: True
+                                             hist_size: 6
+                                             frame_skip: 3
+                                             action_combinations: move_fb+move_lr;turn_lr;attack
+                                             freelook: False
+                                             speed: on
+                                             crouch: off
+                                             manual_control: True
+                                             players_per_game: 4
+                                             player_rank: 1
+                                             dump_path: ./test/0vkli9ttxi
+                                             visualize: True
+                                             evaluate: 1
+                                             human_player: False
+                                             reload: /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth
+                                             dump_freq: 0
+                                             gpu_id: -1
+                                             log_frequency: 100
+                                             network_type: dqn_rnn
+                                             use_bn: False
+                                             batch_size: 32
+                                             replay_memory_size: 1000000
+                                             start_decay: 0
+                                             stop_decay: 1000000
+                                             final_decay: 0.1
+                                             gamma: 0.99
+                                             dueling_network: False
+                                             recurrence: lstm
+                                             n_rec_updates: 1
+                                             n_rec_layers: 1
+                                             remember: True
+                                             clip_delta: 1.0
+                                             variable_dim: [32, 32]
+                                             bucket_size: [10, 1]
+                                             hidden_dim: 512
+                                             update_frequency: 4
+                                             dropout: 0.5
+                                             optimizer: rmsprop,lr=0.0002
+                                             wad: deathmatch_shotgun
+                                             n_bots: 0
+                                             reward_values: 
+                                             randomize_textures: False
+                                             init_bots_health: 100
+                                             game_variables: [('health', 101), ('sel_ammo', 301)]
+                                             n_variables: 2
+                                             n_features: 2
+                                             n_fm: 4
+                                             use_continuous: False
+                                             episode_time: None
+                                             eval_freq: 20000
+                                             eval_time: 900
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - 29 available actions:
+                                             ['ATTACK']
+                                             ['TURN_LEFT']
+                                             ['TURN_LEFT', 'ATTACK']
+                                             ['TURN_RIGHT']
+                                             ['TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_FORWARD']
+                                             ['MOVE_FORWARD', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_LEFT']
+                                             ['MOVE_FORWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_BACKWARD']
+                                             ['MOVE_BACKWARD', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_LEFT']
+                                             ['MOVE_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_LEFT']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_RIGHT']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT']
+                                             ['MOVE_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_LEFT']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'ATTACK']
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Reward values:
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Input shape: (4, 60, 108)
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - scenario: self_play
+                                             map_ids_train: [1]
+                                             map_ids_test: [7]
+                                             freedoom: True
+                                             height: 60
+                                             width: 108
+                                             gray: False
+                                             use_screen_buffer: True
+                                             use_depth_buffer: False
+                                             labels_mapping: 0
+                                             game_features: target,enemy
+                                             render_hud: False
+                                             render_crosshair: True
+                                             render_weapon: True
+                                             hist_size: 6
+                                             frame_skip: 3
+                                             action_combinations: move_fb+move_lr;turn_lr;attack
+                                             freelook: False
+                                             speed: on
+                                             crouch: off
+                                             manual_control: True
+                                             players_per_game: 4
+                                             player_rank: 3
+                                             dump_path: ./test/0vkli9ttxi
+                                             visualize: True
+                                             evaluate: 1
+                                             human_player: False
+                                             reload: /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth
+                                             dump_freq: 0
+                                             gpu_id: -1
+                                             log_frequency: 100
+                                             network_type: dqn_rnn
+                                             use_bn: False
+                                             batch_size: 32
+                                             replay_memory_size: 1000000
+                                             start_decay: 0
+                                             stop_decay: 1000000
+                                             final_decay: 0.1
+                                             gamma: 0.99
+                                             dueling_network: False
+                                             recurrence: lstm
+                                             n_rec_updates: 1
+                                             n_rec_layers: 1
+                                             remember: True
+                                             clip_delta: 1.0
+                                             variable_dim: [32, 32]
+                                             bucket_size: [10, 1]
+                                             hidden_dim: 512
+                                             update_frequency: 4
+                                             dropout: 0.5
+                                             optimizer: rmsprop,lr=0.0002
+                                             wad: deathmatch_shotgun
+                                             n_bots: 0
+                                             reward_values: 
+                                             randomize_textures: False
+                                             init_bots_health: 100
+                                             game_variables: [('health', 101), ('sel_ammo', 301)]
+                                             n_variables: 2
+                                             n_features: 2
+                                             n_fm: 4
+                                             use_continuous: False
+                                             episode_time: None
+                                             eval_freq: 20000
+                                             eval_time: 900
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - scenario: self_play
+                                             map_ids_train: [1]
+                                             map_ids_test: [7]
+                                             freedoom: True
+                                             height: 60
+                                             width: 108
+                                             gray: False
+                                             use_screen_buffer: True
+                                             use_depth_buffer: False
+                                             labels_mapping: 0
+                                             game_features: target,enemy
+                                             render_hud: False
+                                             render_crosshair: True
+                                             render_weapon: True
+                                             hist_size: 6
+                                             frame_skip: 3
+                                             action_combinations: move_fb+move_lr;turn_lr;attack
+                                             freelook: False
+                                             speed: on
+                                             crouch: off
+                                             manual_control: True
+                                             players_per_game: 4
+                                             player_rank: 2
+                                             dump_path: ./test/0vkli9ttxi
+                                             visualize: True
+                                             evaluate: 1
+                                             human_player: False
+                                             reload: /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth
+                                             dump_freq: 0
+                                             gpu_id: -1
+                                             log_frequency: 100
+                                             network_type: dqn_rnn
+                                             use_bn: False
+                                             batch_size: 32
+                                             replay_memory_size: 1000000
+                                             start_decay: 0
+                                             stop_decay: 1000000
+                                             final_decay: 0.1
+                                             gamma: 0.99
+                                             dueling_network: False
+                                             recurrence: lstm
+                                             n_rec_updates: 1
+                                             n_rec_layers: 1
+                                             remember: True
+                                             clip_delta: 1.0
+                                             variable_dim: [32, 32]
+                                             bucket_size: [10, 1]
+                                             hidden_dim: 512
+                                             update_frequency: 4
+                                             dropout: 0.5
+                                             optimizer: rmsprop,lr=0.0002
+                                             wad: deathmatch_shotgun
+                                             n_bots: 0
+                                             reward_values: 
+                                             randomize_textures: False
+                                             init_bots_health: 100
+                                             game_variables: [('health', 101), ('sel_ammo', 301)]
+                                             n_variables: 2
+                                             n_features: 2
+                                             n_fm: 4
+                                             use_continuous: False
+                                             episode_time: None
+                                             eval_freq: 20000
+                                             eval_time: 900
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - 9 available buttons: ['MOVE_FORWARD', 'MOVE_BACKWARD', 'TURN_LEFT', 'TURN_RIGHT', 'MOVE_LEFT', 'MOVE_RIGHT', 'ATTACK', 'SPEED', 'CROUCH']
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - 29 available actions:
+                                             ['ATTACK']
+                                             ['TURN_LEFT']
+                                             ['TURN_LEFT', 'ATTACK']
+                                             ['TURN_RIGHT']
+                                             ['TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_FORWARD']
+                                             ['MOVE_FORWARD', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_LEFT']
+                                             ['MOVE_FORWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_BACKWARD']
+                                             ['MOVE_BACKWARD', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_LEFT']
+                                             ['MOVE_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_LEFT']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_RIGHT']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT']
+                                             ['MOVE_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_LEFT']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'ATTACK']
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - 29 available actions:
+                                             ['ATTACK']
+                                             ['TURN_LEFT']
+                                             ['TURN_LEFT', 'ATTACK']
+                                             ['TURN_RIGHT']
+                                             ['TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_FORWARD']
+                                             ['MOVE_FORWARD', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_LEFT']
+                                             ['MOVE_FORWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT']
+                                             ['MOVE_FORWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_BACKWARD']
+                                             ['MOVE_BACKWARD', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT']
+                                             ['MOVE_BACKWARD', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT']
+                                             ['MOVE_BACKWARD', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_LEFT']
+                                             ['MOVE_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_LEFT']
+                                             ['MOVE_LEFT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_LEFT', 'TURN_RIGHT']
+                                             ['MOVE_LEFT', 'TURN_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT']
+                                             ['MOVE_RIGHT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_LEFT']
+                                             ['MOVE_RIGHT', 'TURN_LEFT', 'ATTACK']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT']
+                                             ['MOVE_RIGHT', 'TURN_RIGHT', 'ATTACK']
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Reward values:
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Reward values:
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - {'BASE_REWARD': 0.0, 'DISTANCE': 0.0, 'KILL': 5.0, 'DEATH': -5.0, 'SUICIDE': -5.0, 'MEDIKIT': 1.0, 'ARMOR': 1.0, 'INJURED': -1.0, 'WEAPON': 1.0, 'AMMO': 1.0, 'USE_AMMO': -0.2}
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Input shape: (4, 60, 108)
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Input shape: (4, 60, 108)
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Conv layer output dim : 4608
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Hidden layer input dim: 4672
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Conv layer output dim : 4608
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Hidden layer input dim: 4672
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Conv layer output dim : 4608
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Hidden layer input dim: 4672
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Conv layer output dim : 4608
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Hidden layer input dim: 4672
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Reloading model from /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth...
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Reloading model from /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth...
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Reloading model from /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth...
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Reloading model from /home/biplav-oraon/Arnold/pretrained/deathmatch_shotgun.pth...
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Evaluating the model...
+INFO [46154] - 02/25/26 00:01:21 - 0:00:00 - Evaluating on map 7 ...
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Evaluating the model...
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Evaluating the model...
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Evaluating the model...
+INFO [46155] - 02/25/26 00:01:21 - 0:00:00 - Evaluating on map 7 ...
+INFO [46156] - 02/25/26 00:01:21 - 0:00:00 - Evaluating on map 7 ...
+INFO [46157] - 02/25/26 00:01:21 - 0:00:00 - Evaluating on map 7 ...
+INFO [46157] - 02/25/26 00:01:24 - 0:00:02 - Respawn player
+INFO [46156] - 02/25/26 00:01:25 - 0:00:03 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:01:25 - 0:00:03 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:01:26 - 0:00:04 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:01:26 - 0:00:05 - Dead
+INFO [46155] - 02/25/26 00:01:26 - 0:00:05 - Lost health (100 -> 0)
+INFO [46156] - 02/25/26 00:01:26 - 0:00:05 - Lost ammo: shells (18 -> 16)
+INFO [46155] - 02/25/26 00:01:27 - 0:00:06 - Respawn player
+INFO [46156] - 02/25/26 00:01:27 - 0:00:06 - Dead
+INFO [46156] - 02/25/26 00:01:27 - 0:00:06 - Lost health (100 -> -5)
+INFO [46157] - 02/25/26 00:01:27 - 0:00:06 - Lost ammo: shells (18 -> 16)
+INFO [46155] - 02/25/26 00:01:28 - 0:00:07 - Found ammo: shells (20 -> 40)
+INFO [46156] - 02/25/26 00:01:28 - 0:00:07 - Respawn player
+INFO [46157] - 02/25/26 00:01:29 - 0:00:07 - Lost ammo: shells (16 -> 14)
+INFO [46157] - 02/25/26 00:01:30 - 0:00:08 - Dead
+INFO [46157] - 02/25/26 00:01:30 - 0:00:08 - Lost health (100 -> -10)
+INFO [46155] - 02/25/26 00:01:30 - 0:00:08 - Lost ammo: shells (40 -> 38)
+INFO [46155] - 02/25/26 00:01:30 - 0:00:09 - Dead
+INFO [46155] - 02/25/26 00:01:30 - 0:00:09 - Lost health (100 -> -5)
+INFO [46156] - 02/25/26 00:01:30 - 0:00:09 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:01:31 - 0:00:09 - Respawn player
+INFO [46155] - 02/25/26 00:01:31 - 0:00:10 - Respawn player
+INFO [46156] - 02/25/26 00:01:32 - 0:00:11 - Dead
+INFO [46156] - 02/25/26 00:01:32 - 0:00:11 - Lost health (100 -> -10)
+INFO [46157] - 02/25/26 00:01:32 - 0:00:11 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:33 - 0:00:12 - Respawn player
+INFO [46157] - 02/25/26 00:01:34 - 0:00:13 - Lost ammo: shells (18 -> 16)
+INFO [46155] - 02/25/26 00:01:34 - 0:00:13 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:34 - 0:00:13 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:01:36 - 0:00:14 - Dead
+INFO [46155] - 02/25/26 00:01:36 - 0:00:14 - Lost health (100 -> 0)
+INFO [46154] - 02/25/26 00:01:36 - 0:00:14 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:36 - 0:00:15 - Lost ammo: shells (18 -> 16)
+INFO [46155] - 02/25/26 00:01:37 - 0:00:16 - Respawn player
+INFO [46156] - 02/25/26 00:01:37 - 0:00:16 - Dead
+INFO [46156] - 02/25/26 00:01:37 - 0:00:16 - Lost health (100 -> 0)
+INFO [46157] - 02/25/26 00:01:37 - 0:00:16 - Lost ammo: shells (16 -> 14)
+INFO [46156] - 02/25/26 00:01:38 - 0:00:17 - Respawn player
+INFO [46157] - 02/25/26 00:01:39 - 0:00:17 - Lost ammo: shells (14 -> 12)
+INFO [46157] - 02/25/26 00:01:39 - 0:00:18 - Dead
+INFO [46157] - 02/25/26 00:01:39 - 0:00:18 - Lost health (100 -> -5)
+INFO [46156] - 02/25/26 00:01:39 - 0:00:18 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:01:40 - 0:00:19 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:01:40 - 0:00:19 - Respawn player
+INFO [46155] - 02/25/26 00:01:41 - 0:00:19 - Dead
+INFO [46155] - 02/25/26 00:01:41 - 0:00:19 - Lost health (100 -> 0)
+INFO [46156] - 02/25/26 00:01:41 - 0:00:19 - Lost ammo: shells (18 -> 16)
+INFO [46155] - 02/25/26 00:01:42 - 0:00:20 - Respawn player
+INFO [46156] - 02/25/26 00:01:43 - 0:00:21 - Lost ammo: shells (16 -> 14)
+INFO [46156] - 02/25/26 00:01:43 - 0:00:21 - Dead
+INFO [46156] - 02/25/26 00:01:43 - 0:00:21 - Lost health (100 -> 0)
+INFO [46157] - 02/25/26 00:01:43 - 0:00:21 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:01:43 - 0:00:22 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:44 - 0:00:22 - Respawn player
+INFO [46157] - 02/25/26 00:01:45 - 0:00:23 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:01:45 - 0:00:24 - Dead
+INFO [46157] - 02/25/26 00:01:45 - 0:00:24 - Lost health (100 -> -5)
+INFO [46155] - 02/25/26 00:01:45 - 0:00:24 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:01:46 - 0:00:25 - Respawn player
+INFO [46155] - 02/25/26 00:01:46 - 0:00:25 - Dead
+INFO [46155] - 02/25/26 00:01:46 - 0:00:25 - Lost health (100 -> 0)
+INFO [46156] - 02/25/26 00:01:46 - 0:00:25 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:01:47 - 0:00:26 - Respawn player
+INFO [46156] - 02/25/26 00:01:48 - 0:00:27 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:01:49 - 0:00:28 - Lost ammo: shells (20 -> 18)
+INFO [46154] - 02/25/26 00:01:49 - 0:00:28 - Found ammo: shells (18 -> 22)
+INFO [46156] - 02/25/26 00:01:50 - 0:00:28 - Dead
+INFO [46156] - 02/25/26 00:01:50 - 0:00:28 - Lost health (100 -> -5)
+INFO [46155] - 02/25/26 00:01:50 - 0:00:28 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:51 - 0:00:29 - Respawn player
+INFO [46155] - 02/25/26 00:01:51 - 0:00:30 - Dead
+INFO [46155] - 02/25/26 00:01:51 - 0:00:30 - Lost health (100 -> 0)
+INFO [46157] - 02/25/26 00:01:51 - 0:00:30 - Lost ammo: shells (18 -> 16)
+INFO [46155] - 02/25/26 00:01:52 - 0:00:31 - Respawn player
+INFO [46157] - 02/25/26 00:01:53 - 0:00:32 - Lost ammo: shells (16 -> 14)
+INFO [46155] - 02/25/26 00:01:53 - 0:00:32 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:55 - 0:00:34 - Lost ammo: shells (20 -> 18)
+INFO [46154] - 02/25/26 00:01:55 - 0:00:34 - Lost ammo: shells (22 -> 20)
+INFO [46156] - 02/25/26 00:01:55 - 0:00:34 - Dead
+INFO [46156] - 02/25/26 00:01:55 - 0:00:34 - Lost health (100 -> 0)
+INFO [46155] - 02/25/26 00:01:55 - 0:00:34 - Lost ammo: shells (18 -> 16)
+WARNING [46157] - 02/25/26 00:01:55 - 0:00:34 - Activated manual control
+INFO [46156] - 02/25/26 00:01:56 - 0:00:35 - Respawn player
+INFO [46155] - 02/25/26 00:01:57 - 0:00:35 - Dead
+INFO [46155] - 02/25/26 00:01:57 - 0:00:35 - Lost health (100 -> -5)
+INFO [46157] - 02/25/26 00:01:57 - 0:00:35 - Lost ammo: shells (14 -> 12)
+INFO [46155] - 02/25/26 00:01:58 - 0:00:36 - Respawn player
+INFO [46157] - 02/25/26 00:01:58 - 0:00:37 - Lost health (100 -> 55)
+INFO [46154] - 02/25/26 00:01:58 - 0:00:37 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:01:58 - 0:00:37 - Lost ammo: shells (12 -> 10)
+INFO [46156] - 02/25/26 00:01:59 - 0:00:38 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:01:59 - 0:00:38 - Lost health (100 -> 50)
+INFO [46156] - 02/25/26 00:02:00 - 0:00:39 - Dead
+INFO [46156] - 02/25/26 00:02:00 - 0:00:39 - Lost health (50 -> -5)
+INFO [46157] - 02/25/26 00:02:00 - 0:00:39 - Lost ammo: shells (10 -> 8)
+INFO [46157] - 02/25/26 00:02:01 - 0:00:39 - Dead
+INFO [46157] - 02/25/26 00:02:01 - 0:00:39 - Lost health (55 -> -5)
+INFO [46155] - 02/25/26 00:02:01 - 0:00:39 - Lost ammo: shells (20 -> 18)
+INFO [46154] - 02/25/26 00:02:01 - 0:00:40 - Lost ammo: shells (18 -> 16)
+INFO [46156] - 02/25/26 00:02:01 - 0:00:40 - Respawn player
+INFO [46157] - 02/25/26 00:02:02 - 0:00:40 - Respawn player
+INFO [46155] - 02/25/26 00:02:02 - 0:00:41 - Lost ammo: shells (18 -> 16)
+INFO [46154] - 02/25/26 00:02:02 - 0:00:41 - Lost health (100 -> 25)
+INFO [46154] - 02/25/26 00:02:03 - 0:00:41 - Lost ammo: shells (16 -> 14)
+INFO [46155] - 02/25/26 00:02:04 - 0:00:43 - Dead
+INFO [46155] - 02/25/26 00:02:04 - 0:00:43 - Lost health (100 -> 0)
+INFO [46154] - 02/25/26 00:02:04 - 0:00:43 - Lost ammo: shells (14 -> 12)
+INFO [46156] - 02/25/26 00:02:05 - 0:00:44 - Dead
+INFO [46156] - 02/25/26 00:02:05 - 0:00:44 - Lost health (100 -> -10)
+INFO [46157] - 02/25/26 00:02:05 - 0:00:44 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:02:05 - 0:00:44 - Respawn player
+INFO [46156] - 02/25/26 00:02:06 - 0:00:45 - Respawn player
+INFO [46157] - 02/25/26 00:02:06 - 0:00:45 - Lost health (100 -> 60)
+INFO [46154] - 02/25/26 00:02:07 - 0:00:45 - Lost ammo: shells (12 -> 10)
+INFO [46157] - 02/25/26 00:02:07 - 0:00:46 - Lost ammo: shells (18 -> 16)
+INFO [46154] - 02/25/26 00:02:07 - 0:00:46 - Dead
+INFO [46154] - 02/25/26 00:02:07 - 0:00:46 - Lost health (25 -> -5)
+INFO [46156] - 02/25/26 00:02:08 - 0:00:46 - Lost ammo: shells (20 -> 18)
+INFO [46154] - 02/25/26 00:02:08 - 0:00:47 - Respawn player
+INFO [46157] - 02/25/26 00:02:09 - 0:00:48 - Dead
+INFO [46157] - 02/25/26 00:02:09 - 0:00:48 - Lost health (60 -> -5)
+INFO [46155] - 02/25/26 00:02:09 - 0:00:48 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:02:10 - 0:00:49 - Respawn player
+INFO [46156] - 02/25/26 00:02:10 - 0:00:49 - Lost ammo: shells (18 -> 16)
+INFO [46156] - 02/25/26 00:02:11 - 0:00:50 - Dead
+INFO [46156] - 02/25/26 00:02:11 - 0:00:50 - Lost health (100 -> -5)
+INFO [46155] - 02/25/26 00:02:11 - 0:00:50 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:02:11 - 0:00:50 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:02:12 - 0:00:51 - Respawn player
+INFO [46155] - 02/25/26 00:02:13 - 0:00:52 - Lost ammo: shells (16 -> 14)
+INFO [46155] - 02/25/26 00:02:13 - 0:00:52 - Dead
+INFO [46155] - 02/25/26 00:02:13 - 0:00:52 - Lost health (100 -> -10)
+INFO [46156] - 02/25/26 00:02:13 - 0:00:52 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:02:14 - 0:00:53 - Respawn player
+INFO [46157] - 02/25/26 00:02:14 - 0:00:53 - Lost ammo: shells (18 -> 16)
+INFO [46154] - 02/25/26 00:02:14 - 0:00:53 - Lost health (100 -> 80)
+INFO [46154] - 02/25/26 00:02:15 - 0:00:54 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:02:15 - 0:00:54 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:02:15 - 0:00:54 - Lost health (100 -> 90)
+INFO [46154] - 02/25/26 00:02:15 - 0:00:54 - Lost health (80 -> 10)
+INFO [46156] - 02/25/26 00:02:16 - 0:00:55 - Lost health (100 -> 50)
+INFO [46157] - 02/25/26 00:02:16 - 0:00:55 - Lost ammo: shells (16 -> 14)
+INFO [46156] - 02/25/26 00:02:17 - 0:00:55 - Dead
+INFO [46156] - 02/25/26 00:02:17 - 0:00:55 - Lost health (50 -> -5)
+INFO [46157] - 02/25/26 00:02:17 - 0:00:55 - Lost health (90 -> 75)
+INFO [46154] - 02/25/26 00:02:17 - 0:00:55 - Lost ammo: shells (18 -> 16)
+INFO [46154] - 02/25/26 00:02:17 - 0:00:56 - Dead
+INFO [46154] - 02/25/26 00:02:17 - 0:00:56 - Lost health (10 -> 0)
+INFO [46155] - 02/25/26 00:02:17 - 0:00:56 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:02:18 - 0:00:56 - Respawn player
+INFO [46157] - 02/25/26 00:02:18 - 0:00:57 - Lost ammo: shells (14 -> 12)
+INFO [46154] - 02/25/26 00:02:18 - 0:00:57 - Respawn player
+INFO [46157] - 02/25/26 00:02:19 - 0:00:58 - Dead
+INFO [46157] - 02/25/26 00:02:19 - 0:00:58 - Lost health (75 -> 0)
+INFO [46155] - 02/25/26 00:02:19 - 0:00:58 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:02:20 - 0:00:59 - Respawn player
+INFO [46156] - 02/25/26 00:02:22 - 0:01:00 - Lost health (100 -> 45)
+INFO [46155] - 02/25/26 00:02:22 - 0:01:00 - Lost ammo: shells (16 -> 14)
+INFO [46155] - 02/25/26 00:02:22 - 0:01:01 - Dead
+INFO [46155] - 02/25/26 00:02:22 - 0:01:01 - Lost health (100 -> 0)
+INFO [46156] - 02/25/26 00:02:22 - 0:01:01 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:02:23 - 0:01:02 - Respawn player
+INFO [46156] - 02/25/26 00:02:24 - 0:01:02 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:02:24 - 0:01:03 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:02:25 - 0:01:03 - Dead
+INFO [46157] - 02/25/26 00:02:25 - 0:01:03 - Lost health (100 -> 0)
+INFO [46155] - 02/25/26 00:02:25 - 0:01:04 - Lost ammo: shells (20 -> 18)
+INFO [46156] - 02/25/26 00:02:25 - 0:01:04 - Lost ammo: shells (16 -> 14)
+INFO [46157] - 02/25/26 00:02:26 - 0:01:05 - Respawn player
+INFO [46155] - 02/25/26 00:02:27 - 0:01:06 - Dead
+INFO [46155] - 02/25/26 00:02:27 - 0:01:06 - Lost health (100 -> 0)
+INFO [46156] - 02/25/26 00:02:27 - 0:01:06 - Lost ammo: shells (14 -> 12)
+INFO [46156] - 02/25/26 00:02:28 - 0:01:07 - Dead
+INFO [46156] - 02/25/26 00:02:28 - 0:01:07 - Lost health (45 -> -10)
+INFO [46157] - 02/25/26 00:02:28 - 0:01:07 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:02:28 - 0:01:07 - Respawn player
+INFO [46156] - 02/25/26 00:02:29 - 0:01:08 - Respawn player
+INFO [46156] - 02/25/26 00:02:30 - 0:01:08 - Lost ammo: shells (20 -> 18)
+INFO [46154] - 02/25/26 00:02:30 - 0:01:09 - Dead
+INFO [46154] - 02/25/26 00:02:30 - 0:01:09 - Lost health (100 -> -10)
+INFO [46155] - 02/25/26 00:02:30 - 0:01:09 - Lost ammo: shells (20 -> 18)
+INFO [46157] - 02/25/26 00:02:31 - 0:01:09 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:02:31 - 0:01:10 - Dead
+INFO [46157] - 02/25/26 00:02:31 - 0:01:10 - Lost health (100 -> 0)
+INFO [46156] - 02/25/26 00:02:31 - 0:01:10 - Lost ammo: shells (18 -> 16)
+INFO [46154] - 02/25/26 00:02:31 - 0:01:10 - Respawn player
+INFO [46157] - 02/25/26 00:02:32 - 0:01:11 - Respawn player
+INFO [46156] - 02/25/26 00:02:33 - 0:01:11 - Lost ammo: shells (16 -> 14)
+INFO [46157] - 02/25/26 00:02:33 - 0:01:12 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:02:34 - 0:01:13 - Lost ammo: shells (18 -> 16)
+INFO [46156] - 02/25/26 00:02:35 - 0:01:14 - Lost ammo: shells (14 -> 12)
+INFO [46156] - 02/25/26 00:02:35 - 0:01:14 - Dead
+INFO [46156] - 02/25/26 00:02:35 - 0:01:14 - Lost health (100 -> 0)
+INFO [46157] - 02/25/26 00:02:35 - 0:01:14 - Lost ammo: shells (18 -> 16)
+INFO [46157] - 02/25/26 00:02:35 - 0:01:14 - Dead
+INFO [46157] - 02/25/26 00:02:35 - 0:01:14 - Lost health (100 -> -5)
+INFO [46155] - 02/25/26 00:02:35 - 0:01:14 - Lost ammo: shells (16 -> 14)
+INFO [46156] - 02/25/26 00:02:36 - 0:01:15 - Respawn player
+INFO [46157] - 02/25/26 00:02:36 - 0:01:15 - Respawn player
+INFO [46155] - 02/25/26 00:02:38 - 0:01:16 - Lost ammo: shells (14 -> 12)
+INFO [46157] - 02/25/26 00:02:38 - 0:01:16 - Lost ammo: shells (20 -> 18)
+INFO [46155] - 02/25/26 00:02:38 - 0:01:16 - Lost health (100 -> 5)
+INFO [46156] - 02/25/26 00:02:39 - 0:01:17 - Lost ammo: shells (20 -> 18)
