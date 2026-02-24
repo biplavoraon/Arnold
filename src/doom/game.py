@@ -466,7 +466,13 @@ class Game(object):
 
         # freelook / agent name / agent color
         args.append('+freelook %i' % (1 if self.freelook else 0))
-        args.append('+name %s' % self.name)
+
+        if self.player_rank == 0:
+            player_name = "Human"
+        else:
+            player_name = f"Agent_{self.player_rank}"
+
+        args.append('+name %s' % player_name)
         args.append('+colorset %i' % self.color)
 
         # enable the cheat system (so that we can still
