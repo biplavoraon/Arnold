@@ -465,13 +465,19 @@ class Game(object):
         args.append('+sv_spawnfarthest %i' % self.spawn_farthest)
 
         # freelook / agent name / agent color
-        args.append('+freelook %i' % (1 if self.freelook else 0))
 
         if self.player_rank == 0:
             player_name = "Human"
+            player_freelook = 1
+            args.append('+mouse_capturemode 2')  # force capture
+            args.append('+m_pitch 1')
         else:
             player_name = f"Agent_{self.player_rank}"
+            player_freelook = 0
 
+        args.append('+freelook %i' % player_freelook)
+        args.append('+use_mouse %i' % player_freelook)
+        args.append('+m_use_mouse %i' % player_freelook)
         args.append('+name %s' % player_name)
         args.append('+colorset %i' % self.color)
 

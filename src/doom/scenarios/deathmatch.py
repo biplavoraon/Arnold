@@ -100,8 +100,8 @@ def main(parser, args, parameter_server=None):
         render_hud=params.render_hud,
         render_crosshair=params.render_crosshair,
         render_weapon=params.render_weapon,
-        freelook=params.freelook,
-        visible=params.visualize,
+        freelook=params.human_player,
+        visible=params.human_player,
         n_bots=params.n_bots,
         use_scripted_marines=True
     )
@@ -150,7 +150,7 @@ def evaluate_deathmatch(game, network, params, n_train_iter=None):
 
         logger.info("Evaluating on map %i ..." % map_id)
         game.start(map_id=map_id, log_events=True,
-                   manual_control=(params.manual_control and not params.human_player))
+                   manual_control=params.human_player)
         game.randomize_textures(False)
         game.init_bots_health(100)
         network.reset()
